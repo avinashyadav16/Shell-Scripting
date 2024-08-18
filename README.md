@@ -8,6 +8,14 @@ Shell scripting is a powerful tool that allows you to automate tasks and manage 
 
 ## Table of Contents
 
+1. [Most Common Unix Commands](./Most_Common_Unix_Commands.md)
+2. [001 Directory and File Management](./001_Directory_And_File_Management.md)
+3. [002 Editing Files and Viewing](./002_Editing_Files_And_Viewing.md)
+4. [PRACTICE](./PRACTICE/)
+   - [001 PRACTICE](./001%20PRACTICE/)
+
+## Table of Contents in this File
+
 1. [Introduction](#introduction)
 2. [Understanding the Shell](#understanding-the-shell)
    - What is a Shell?
