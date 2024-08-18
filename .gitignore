@@ -12,3 +12,5 @@ config.ini
 
 # Ignore sensitive files
 credentials.txt
+
+TestingFolder
