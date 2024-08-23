@@ -12,7 +12,8 @@ Shell scripting is a powerful tool that allows you to automate tasks and manage 
 2. [001 Directory and File Management](./001_Directory_And_File_Management.md)
 3. [002 Editing Files and Viewing](./002_Editing_Files_And_Viewing.md)
 4. [PRACTICE](./PRACTICE/)
-   - [001 PRACTICE](./001%20PRACTICE/)
+   - [001 PRACTICE](./PRACTICE/001%20PRACTICE/To-Do-File.md)
+   - [002 PRACTICE](./PRACTICE/002%20PRACTICE/To-Do-File.mds)
 
 ## Table of Contents in this File
 
