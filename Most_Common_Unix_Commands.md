@@ -1,5 +1,7 @@
 # Most Basic Linux Commands:
 
+[🔗For More Commands And Thier Detailed Explanations: Read My Article On Medium](https://medium.com/@avinashyadav16/essential-linux-commands-for-beginners-fa767d59f236)
+
 `linux` `LinuxCommands` `SysAdmin` `DeveloperTips` `LinuxTips` `DevOps` `CodingLife` `CommandLine` `LinuxTutorial` `bash` `devops`
 
 | **Command**   | **Description**                                                                                               | **Example Command**               |

@@ -1,5 +1,7 @@
 # Shell Scripting Guide
 
+<img title="repo views" src="https://repoviews.netlify.app/.netlify/functions/repoViews?repo=https://github.com/avinashyadav16/Shell-Scripting">
+
 ## Introduction
 
 Shell scripting is a powerful tool that allows you to automate tasks and manage your system efficiently. This guide provides a comprehensive overview of basic shell commands, directory and file management, file editing, and troubleshooting tips. Whether you are a beginner or need a refresher, this guide will help you understand and execute common shell scripting tasks.
