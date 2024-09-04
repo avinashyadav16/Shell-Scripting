@@ -1,6 +1,6 @@
 # Shell Scripting Guide
 
-![repo views](https://repoviews.netlify.app/.netlify/functions/repoViews?repo=https://github.com/avinashyadav16/Shell-Scripting)
+<! --![repo views](https://repoviews.netlify.app/.netlify/functions/repoViews?repo=https://github.com/avinashyadav16/Shell-Scripting) -->
 
 ## Introduction
 
