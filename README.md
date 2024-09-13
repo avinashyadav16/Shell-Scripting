@@ -1,7 +1,5 @@
 # Shell Scripting Guide
 
-<!-- ![repo views](https://repoviews.netlify.app/.netlify/functions/repoViews?repo=https://github.com/avinashyadav16/Shell-Scripting) -->
-
 ## Introduction
 
 Shell scripting is a powerful tool that allows you to automate tasks and manage your system efficiently. This guide provides a comprehensive overview of basic shell commands, directory and file management, file editing, and troubleshooting tips. Whether you are a beginner or need a refresher, this guide will help you understand and execute common shell scripting tasks.
@@ -16,7 +14,10 @@ Shell scripting is a powerful tool that allows you to automate tasks and manage 
 4. [002 Editing Files and Viewing](./002_Editing_Files_And_Viewing.md)
 5. [PRACTICE](./PRACTICE/)
    - [001 PRACTICE](./PRACTICE/001%20PRACTICE/To-Do-File.md)
-   - [002 PRACTICE](./PRACTICE/002%20PRACTICE/To-Do-File.mds)
+   - [002 PRACTICE](./PRACTICE/002%20PRACTICE/To-Do-File.md)
+   - [003 PRACTICE](./PRACTICE/003%20PRACTICE/To-Do-File.md)
+   - [004 PRACTICE](./PRACTICE/004%20PRACTICE/To-Do-File.md)
+   - [005 PRACTICE](./PRACTICE/005%20PRACTICE/To-Do-File.md)
 
 ## Table of Contents in this File
 
@@ -107,13 +108,19 @@ Follow the prompts to change your shell. Note that this is a custom script and n
 
 ### Common Commands Overview
 
-`ls`: Lists the contents of a directory.
-`cd`: Changes the current directory.
-`mkdir`: Creates a new directory.
-`rm`: Removes files or directories.
-`cp`: Copies files or directories.
-`mv`: Moves or renames files or directories.
-`echo`: Displays a line of text.
+- `ls`: Lists the contents of a directory.
+
+- `cd`: Changes the current directory.
+
+- `mkdir`: Creates a new directory.
+
+- `rm`: Removes files or directories.
+
+- `cp`: Copies files or directories.
+
+- `mv`: Moves or renames files or directories.
+
+- `echo`: Displays a line of text.
 
 ## Directory and File Management
 

@@ -48,8 +48,9 @@ The guide demonstrates:
 ```
 
 **Description**: Opens `newFile.sh` in the nano text editor. nano is a simple, user-friendly text editor that allows for interactive editing of files.
-To `Save` Changes: Press `Ctrl+O`, then press `ENTER`.
-To `Exit`: Press `Ctrl+X`.
+
+- To `Save` Changes: Press `Ctrl+O`, then press `ENTER`.
+- To `Exit`: Press `Ctrl+X`.
 
 **Output**: The terminal will display the nano text editor interface, where you can make changes to the file. There is no immediate output until you save and exit the editor.
 
@@ -62,11 +63,12 @@ To `Exit`: Press `Ctrl+X`.
 ```
 
 **Description**: Opens `newFile.sh` in the vi text editor. vi is a powerful text editor with modes for both command-line operations and text editing.
-`Insert Mode`: Press `i` to enter Insert mode, which allows you to type and edit the content.
-`Command Mode`: Press `Esc` to return to Command mode. In this mode, you can navigate, delete, copy, and paste text.
-Basic Commands:
-To `Save Changes and Exit`: Type `:wq` and press `ENTER`.
-To `Exit Without Saving`: Type `:q!` and press `ENTER`.
+
+- `Insert Mode`: Press `i` to enter Insert mode, which allows you to type and edit the content.
+- `Command Mode`: Press `Esc` to return to Command mode. In this mode, you can navigate, delete, copy, and paste text.
+- Basic Commands:
+  - To `Save Changes and Exit`: Type `:wq` and press `ENTER`.
+  - To `Exit Without Saving`: Type `:q!` and press `ENTER`.
 
 **Output**: The terminal will display the vi text editor interface. No immediate output is shown until you save and exit the editor.
 
