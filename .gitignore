@@ -15,3 +15,6 @@ credentials.txt
 
 TestingFolder
 Documents
+
+*.exe
+.vscode

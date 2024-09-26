@@ -18,6 +18,7 @@ Shell scripting is a powerful tool that allows you to automate tasks and manage 
    - [003 PRACTICE](./PRACTICE/003%20PRACTICE/To-Do-File.md)
    - [004 PRACTICE](./PRACTICE/004%20PRACTICE/To-Do-File.md)
    - [005 PRACTICE](./PRACTICE/005%20PRACTICE/To-Do-File.md)
+   - [006 PRACTICE](./PRACTICE/006%20PRACTICE/To-Do-File.md)
 
 ## Table of Contents in this File
 
