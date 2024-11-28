@@ -5,7 +5,7 @@
 
 
     => Brief:
-            C Program to implement Shortest Job First (SJF) scheduling algorithm (Non-preemptive)
+            C++ Program to implement Shortest Job First (SJF) scheduling algorithm (Non-preemptive)
 
 
     => Algorithm:
@@ -30,19 +30,24 @@
 
 */
 
-#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
 
 // Function to swap two values
-void swap(int *a, int *b)
+void swap(int &a, int &b)
 {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+    int temp = a;
+    a = b;
+    b = temp;
 }
 
 // Function to sort the processes based on burst time (SJF criterion)
-void sortProcessesByBurstTime(int processes[], int n, int burst_time[])
+void sortProcessesByBurstTime(vector<int> &processes, vector<int> &burst_time)
 {
+    int n = processes.size();
     for (int i = 0; i < n - 1; i++)
     {
         for (int j = i + 1; j < n; j++)
@@ -51,18 +56,19 @@ void sortProcessesByBurstTime(int processes[], int n, int burst_time[])
             if (burst_time[i] > burst_time[j])
             {
                 // Swap process IDs
-                swap(&processes[i], &processes[j]);
+                swap(processes[i], processes[j]);
 
                 // Swap burst times
-                swap(&burst_time[i], &burst_time[j]);
+                swap(burst_time[i], burst_time[j]);
             }
         }
     }
 }
 
 // Function to calculate completion time for each process
-void findCompletionTime(int processes[], int n, int burst_time[], int comp_time[])
+void findCompletionTime(const vector<int> &burst_time, vector<int> &comp_time)
 {
+    int n = burst_time.size();
     // Completion time for the first process is its burst time
     comp_time[0] = burst_time[0];
 
@@ -74,8 +80,9 @@ void findCompletionTime(int processes[], int n, int burst_time[], int comp_time[
 }
 
 // Function to calculate turn around time (TAT) for each process
-void findTurnAroundTime(int processes[], int n, int burst_time[], int comp_time[], int tat[])
+void findTurnAroundTime(const vector<int> &comp_time, vector<int> &tat)
 {
+    int n = comp_time.size();
     // TAT = Completion Time - Arrival Time (AT), since AT = 0 for all processes, TAT = CT
     for (int i = 0; i < n; i++)
     {
@@ -84,8 +91,9 @@ void findTurnAroundTime(int processes[], int n, int burst_time[], int comp_time[
 }
 
 // Function to calculate waiting time (WT) for each process
-void findWaitingTime(int processes[], int n, int burst_time[], int tat[], int wait_time[])
+void findWaitingTime(const vector<int> &burst_time, const vector<int> &tat, vector<int> &wait_time)
 {
+    int n = burst_time.size();
     // WT = TAT - BT for each process
     for (int i = 0; i < n; i++)
     {
@@ -94,59 +102,52 @@ void findWaitingTime(int processes[], int n, int burst_time[], int tat[], int wa
 }
 
 // Function to calculate average waiting time and turn around time
-void findAvgTime(int processes[], int n, int burst_time[])
+void findAvgTime(vector<int> &processes, vector<int> &burst_time)
 {
-    // Arrays to store CT, TAT, and WT
-    int comp_time[n], tat[n], wait_time[n];
+    int n = processes.size();
+    // Vectors to store CT, TAT, and WT
+    vector<int> comp_time(n), tat(n), wait_time(n);
 
     // Total waiting time and total turn around time
     int total_wait_time = 0, total_tat = 0;
 
     // Sort processes by burst time (SJF scheduling)
-    sortProcessesByBurstTime(processes, n, burst_time);
+    sortProcessesByBurstTime(processes, burst_time);
 
     // Calculate completion time for each process
-    findCompletionTime(processes, n, burst_time, comp_time);
+    findCompletionTime(burst_time, comp_time);
 
     // Calculate turn around time for each process
-    findTurnAroundTime(processes, n, burst_time, comp_time, tat);
+    findTurnAroundTime(comp_time, tat);
 
     // Calculate waiting time for each process
-    findWaitingTime(processes, n, burst_time, tat, wait_time);
+    findWaitingTime(burst_time, tat, wait_time);
 
     // Display process details and results
-    printf("Processes   Arrival Time(AT)   Burst Time(BT)   Completion Time(CT)   Turn-Around Time(TAT)   Waiting Time(WT)\n");
+    cout << "Processes   Arrival Time(AT)   Burst Time(BT)   Completion Time(CT)   Turn-Around Time(TAT)   Waiting Time(WT)\n";
 
     for (int i = 0; i < n; i++)
     {
         total_wait_time += wait_time[i];
         total_tat += tat[i];
 
-        printf("P%d \t\t\t ", (i + 1));
-        printf("%d \t\t\t ", 0);
-        printf("%d \t\t\t ", burst_time[i]);
-        printf("%d \t\t\t ", comp_time[i]);
-        printf("%d \t\t\t ", tat[i]);
-        printf("%d \t\t\t \n", wait_time[i]);
+        cout << "P" << (i + 1) << "\t\t\t " << 0 << "\t\t\t " << burst_time[i] << "\t\t\t " << comp_time[i] << "\t\t\t " << tat[i] << "\t\t\t " << wait_time[i] << "\n";
     }
 
-    printf("\nAverage Waiting Time: %.2f", (float)total_wait_time / (float)n);
-    printf("\nAverage Turn-Around Time: %.2f\n", (float)total_tat / (float)n);
+    cout << "\nAverage Waiting Time: " << (float)total_wait_time / n;
+    cout << "\nAverage Turn-Around Time: " << (float)total_tat / n << "\n";
 }
 
 int main()
 {
     // Process IDs
-    int processes[] = {1, 2, 3, 4, 5};
-
-    // Number of processes
-    int n = sizeof(processes) / sizeof(processes[0]);
+    vector<int> processes = {1, 2, 3, 4, 5};
 
     // Burst time of each process
-    int burst_time[] = {10, 5, 15, 8, 6};
+    vector<int> burst_time = {10, 5, 15, 8, 6};
 
     // Calculate and display average times
-    findAvgTime(processes, n, burst_time);
+    findAvgTime(processes, burst_time);
 
     return 0;
 }

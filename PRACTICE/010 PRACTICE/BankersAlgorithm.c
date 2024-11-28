@@ -1,18 +1,6 @@
-/**
- *  @file: BankersAlgorithm.c
- *  @author: Avinash Yadav
- *  @brief: C program to simulate Banker's algorithm for deadlock avoidance.
- *  @date: 08-11-2024
- */
-
 #include <stdio.h>
-
-
-
 #define MAX_PROCESSES 5
 #define MAX_RESOURCES 3
-
-
 
 /**
  * @brief Function to calculate the need matrix, which is the difference
@@ -32,8 +20,6 @@ void NeedMatrix(int need[MAX_PROCESSES][MAX_RESOURCES],
         }
     }
 }
-
-
 
 /**
  * @brief Function to determine if the system is in a safe state by using
@@ -157,8 +143,6 @@ int isInSafe(int processes[],
     return 1;
 }
 
-
-
 int main()
 {
     int total_processes, resources;
@@ -209,5 +193,3 @@ int main()
 
     return 0;
 }
-
-

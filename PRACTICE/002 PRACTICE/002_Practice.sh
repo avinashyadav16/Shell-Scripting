@@ -2,23 +2,39 @@
 
 # This is a comment.
 
+
 # Showing the date and time
 date
+
 
 # Listing out all the files and directories:
 ls
 
+
 # Printing a statement:
 echo -e "Hello World! \n"
 
+
 # System variables examples:
-echo -e "$BASH_VERSION \n"
-echo -e "$PWD \n"
+echo "The Home Directory is: $HOME"
+echo "The User is: $USER"
+echo "The Hostname is: $HOSTNAME"
+echo "The Terminal is: $TERM"
+echo "The Current Working Directory is: $PWD"
+echo "The Shell is: $SHELL"
+echo "The Path is: $PATH"
+echo "The UID is: $UID"
+echo "The GID is: $GID"
+echo "The PPID is: $PPID"
+echo "The BASH is: $BASH"
+echo "The BASH_VERSION is: $BASH_VERSION"
+
 
 # User-defined Variables
 greetMessage="Greetings of the Day!"
 name="Avinash Yadav"
-echo -e "Hello, $name. $greetMessage\n"
+echo -e "Hello, $name! $greetMessage \n"
+
 
 num1=20
 num2=40
@@ -31,13 +47,14 @@ echo "Enter Your Name Here: "
 read -r name
 echo -e "Good morning $name \n"
 
+
 # Arithmetic operations-Different methods:
 # Method-1:
 prd1=$((10 * 5))
 echo "Product of 10 and 5 is $prd1"
 
 # Method-2:
-((prd2 = 10 * 5))
+((prd2=10 * 5))
 echo "Product of 10 and 5 is $prd2"
 
 # Method-3:
@@ -45,6 +62,7 @@ num1=10
 num2=5
 ((prd3 = num1 * num2))
 echo -e "Product of $num1 and $num2 is $prd3 \n"
+
 
 # Conditional Operator:
 echo "Enter a Number: "
@@ -57,6 +75,8 @@ else
     echo -e "The number is 0 \n"
 fi
 
+
+
 # Checking which Number is greater:
 echo "Enter The First Number: "
 read -r num1
@@ -68,6 +88,7 @@ if [ "$num1" -gt "$num2" ]; then
 else
     echo -e "Second Number $num2 is Greater Than First Number $num1. \n"
 fi
+
 
 # Arrays:
 lang=('C' 'CPP' 'Python' 'Rust' 'R' 'Golang')
@@ -83,8 +104,8 @@ echo "Programming Languages length is: " "${#lang[@]}"
 lang[2]='PHP'
 echo -e "Programming Languages are: " "${lang[@]}" "\n"
 
-# Sum of first n numbers:
 
+# Sum of first n numbers:
 start=1
 sum=0
 echo "Enter The Nth Number:"
