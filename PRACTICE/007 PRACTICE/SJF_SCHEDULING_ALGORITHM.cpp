@@ -102,7 +102,7 @@ void findWaitingTime(const vector<int> &burst_time, const vector<int> &tat, vect
 }
 
 // Function to calculate average waiting time and turn around time
-void findAvgTime(vector<int> &processes, vector<int> &burst_time)
+void SJF_Algo(vector<int> &processes, vector<int> &burst_time)
 {
     int n = processes.size();
     // Vectors to store CT, TAT, and WT
@@ -147,7 +147,7 @@ int main()
     vector<int> burst_time = {10, 5, 15, 8, 6};
 
     // Calculate and display average times
-    findAvgTime(processes, burst_time);
+    SJF_Algo(processes, burst_time);
 
     return 0;
 }

@@ -37,7 +37,7 @@ touch Sports/Badminton/Sample.txt Sports/Football/Sample.txt Sports/Cricket/Samp
 
 
 # 10. Move to the Badminton directory and change the name of Sample.txt to BadmintonTeam.txt
-cd Sports/Badminton
+cd Sports/Badminton || exit
 mv Sample.txt BadmintonTeam.txt
 
 

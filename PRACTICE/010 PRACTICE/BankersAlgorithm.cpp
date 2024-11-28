@@ -1,4 +1,6 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
+
 #define MAX_PROCESSES 5
 #define MAX_RESOURCES 3
 
@@ -50,41 +52,41 @@ int isInSafe(int processes[],
         work[i] = available[i];
     }
 
-    printf("\nInitial Available Resources: ");
+    cout << "\nInitial Available Resources: ";
     for (int i = 0; i < resources; i++)
     {
-        printf("%d ", available[i]);
+        cout << available[i] << " ";
     }
-    printf("\n");
+    cout << "\n";
 
-    printf("\nMax Matrix:\n");
+    cout << "\nMax Matrix:\n";
     for (int i = 0; i < total_processes; i++)
     {
         for (int j = 0; j < resources; j++)
         {
-            printf("%d ", max[i][j]);
+            cout << max[i][j] << " ";
         }
-        printf("\n");
+        cout << "\n";
     }
 
-    printf("\nAllocation Matrix:\n");
+    cout << "\nAllocation Matrix:\n";
     for (int i = 0; i < total_processes; i++)
     {
         for (int j = 0; j < resources; j++)
         {
-            printf("%d ", allocation[i][j]);
+            cout << allocation[i][j] << " ";
         }
-        printf("\n");
+        cout << "\n";
     }
 
-    printf("\nNeed Matrix:\n");
+    cout << "\nNeed Matrix:\n";
     for (int i = 0; i < total_processes; i++)
     {
         for (int j = 0; j < resources; j++)
         {
-            printf("%d ", need[i][j]);
+            cout << need[i][j] << " ";
         }
-        printf("\n");
+        cout << "\n";
     }
 
     int count = 0;
@@ -110,7 +112,6 @@ int isInSafe(int processes[],
                 if (j == resources)
                 {
                     for (int k = 0; k < resources; k++)
-
                         // Release resources after process execution
                         work[k] += allocation[i][k];
 
@@ -127,18 +128,18 @@ int isInSafe(int processes[],
         // If no process could be executed, the system is not in a safe state
         if (!found)
         {
-            printf("\nSystem is not in a safe state.\n");
+            cout << "\nSystem is not in a safe state.\n";
             return 0;
         }
     }
 
     // If system is in safe state
-    printf("\nSystem is in a safe state.\nSafe sequence is: ");
+    cout << "\nSystem is in a safe state.\nSafe sequence is: ";
     for (int i = 0; i < total_processes; i++)
     {
-        printf("P%d ", safeSequence[i]);
+        cout << "P" << safeSequence[i] << " ";
     }
-    printf("\n");
+    cout << "\n";
 
     return 1;
 }
@@ -161,26 +162,26 @@ int main()
 
     int available[MAX_RESOURCES];
 
-    printf("Enter number of processes (<= 5): ");
-    scanf("%d", &total_processes);
+    cout << "Enter number of processes (<= 5): ";
+    cin >> total_processes;
     if (total_processes > MAX_PROCESSES)
     {
-        printf("Exceeds maximum allowed processes.\n");
+        cout << "Exceeds maximum allowed processes.\n";
         return -1;
     }
 
-    printf("Enter number of resources (<= 3): ");
-    scanf("%d", &resources);
+    cout << "Enter number of resources (<= 3): ";
+    cin >> resources;
     if (resources > MAX_RESOURCES)
     {
-        printf("Exceeds maximum allowed resources.\n");
+        cout << "Exceeds maximum allowed resources.\n";
         return -1;
     }
 
     for (int i = 0; i < resources; i++)
     {
-        printf("Enter available resource %d: ", i + 1);
-        scanf("%d", &available[i]);
+        cout << "Enter available resource " << i + 1 << ": ";
+        cin >> available[i];
     }
 
     int processes[MAX_PROCESSES];
